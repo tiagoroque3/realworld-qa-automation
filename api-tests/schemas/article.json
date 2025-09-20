@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "article": {
+      "type": "object",
+      "required": [
+        "slug",
+        "title",
+        "description",
+        "body",
+        "tagList",
+        "createdAt",
+        "updatedAt",
+        "favorited",
+        "favoritesCount",
+        "author"
+      ],
+      "properties": {
+        "slug": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "body": { "type": "string" },
+        "tagList": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "favorited": { "type": "boolean" },
+        "favoritesCount": { "type": "integer" },
+        "author": {
+          "type": "object",
+          "required": ["username", "bio", "image", "following"],
+          "properties": {
+            "username": { "type": "string" },
+            "bio": { "type": ["string", "null"] },
+            "image": { "type": ["string", "null"] },
+            "following": { "type": "boolean" }
+          }
+        }
+      }
+    }
+  }
+}
