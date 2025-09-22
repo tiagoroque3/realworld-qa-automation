@@ -32,3 +32,4 @@ k6-summary-report/
 # OS
 .DS_Store
 Thumbs.db
+\ne2e-tests/.auth/
